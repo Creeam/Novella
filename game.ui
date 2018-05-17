@@ -111,6 +111,9 @@ background-color:rgba(0, 0, 0,0.5);
 
 font: italic 20pt &quot;Monotype Corsiva&quot;;
 color: rgb(231, 231, 231);
+
+padding-left: 15%;
+padding-right: 15%;
 </string>
          </property>
          <property name="sizeAdjustPolicy">

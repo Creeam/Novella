@@ -44,7 +44,7 @@ private:
     QTimer* t;
     int temp;
     int numOfScene;
-    int numOfPersosns;
+    unsigned int numOfPersosns;
     QPixmap BackgroundImg;
     QPixmap* persons;
     QBoxLayout* a;

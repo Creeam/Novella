@@ -51,7 +51,7 @@ void Game::ChangePersons(int width, int height)
     if(numOfPersosns != VecOfPersons.size())
     {
         VecOfPersons.clear();
-        for( int i = 0; i < numOfPersosns; ++i )
+        for( unsigned int i = 0; i < numOfPersosns; ++i )
         {
             VecOfPersons.push_back(new QLabel());
         }
@@ -112,10 +112,6 @@ void Game::ChangeScene()
     switch (numOfScene++) {
     case 0:
     {
-        //numOfPersosns = 1;
-        //persons = new QPixmap[numOfPersosns];
-        //persons[0].load(":/persons/persons/dd.png");
-
         ui->textEdit_Text->setText( "Эй, дружище не подольешь вина?");
         BackgroundImg.load(":/background/background/tavern.jpg");
 
@@ -126,8 +122,13 @@ void Game::ChangeScene()
     case 1:
     {
 
+        if(numOfPersosns <= 0)
+        {
+            numOfPersosns = 1;
+            persons = new QPixmap[numOfPersosns];
+        }
         numOfPersosns = 1;
-        persons = new QPixmap[numOfPersosns];
+
         persons[0].load(":/persons/persons/dd.png");
 
         ui->textEdit_names->setText("Трактирщик");
@@ -138,9 +139,12 @@ void Game::ChangeScene()
         break;
     case 2:
     {
-
+        if(numOfPersosns <= 0)
+        {
+            numOfPersosns = 1;
+            persons = new QPixmap[numOfPersosns];
+        }
         numOfPersosns = 1;
-        persons = new QPixmap[numOfPersosns];
         persons[0].load(":/persons/persons/dd.png");
 
         BackgroundImg.load(":/background/background/tavern.jpg");
@@ -152,8 +156,13 @@ void Game::ChangeScene()
         break;
     case 3:
     {
+        if(numOfPersosns <= 0)
+        {
+            numOfPersosns = 1;
+            persons = new QPixmap[numOfPersosns];
+        }
+
         numOfPersosns = 1;
-        persons = new QPixmap[numOfPersosns];
         persons[0].load(":/persons/persons/dd.png");
 
         BackgroundImg.load(":/background/background/tavern.jpg");
@@ -164,9 +173,12 @@ void Game::ChangeScene()
         break;
     case 4:
     {
-
+        if(numOfPersosns <= 0)
+        {
+            numOfPersosns = 1;
+            persons = new QPixmap[numOfPersosns];
+        }
         numOfPersosns = 1;
-        persons = new QPixmap[numOfPersosns];
         persons[0].load(":/persons/persons/dd.png");
         BackgroundImg.load(":/background/background/tavern.jpg");
         ui->textEdit_names->setText("Вы");
@@ -176,14 +188,293 @@ void Game::ChangeScene()
         break;
     case 5:
     {
-
+        if(numOfPersosns <= 0)
+        {
+            numOfPersosns = 1;
+            persons = new QPixmap[numOfPersosns];
+        }
         numOfPersosns = 1;
-        persons = new QPixmap[numOfPersosns];
         persons[0].load(":/persons/persons/dd.png");
         BackgroundImg.load(":/background/background/tavern.jpg");
-        ui->textEdit_names->setText("трактирщик");
+        ui->textEdit_names->setText("Трактирщик");
         ui->textEdit_Text->setText("Даже и сам король пиратов, я тебе скажу. Леди властвует над всеми моряками и утопленниками.");
 
+    }
+        break;
+    case 6:
+    {
+        if(numOfPersosns <= 0)
+        {
+            numOfPersosns = 1;
+            persons = new QPixmap[numOfPersosns];
+        }
+        numOfPersosns = 1;
+        persons[0].load(":/persons/persons/dd.png");
+        BackgroundImg.load(":/background/background/tavern.jpg");
+        ui->textEdit_names->setText("Вы");
+        ui->textEdit_Text->setText("Хы-хы. Как по мне никакой разницы, моряки – те же утопленники, только пока живыми прикидываются.");
+
+    }
+        break;
+    case 7:
+    {
+        if(numOfPersosns <= 0)
+        {
+            numOfPersosns = 1;
+            persons = new QPixmap[numOfPersosns];
+        }
+        numOfPersosns = 1;
+        persons[0].load(":/persons/persons/dd.png");
+        BackgroundImg.load(":/background/background/tavern.jpg");
+        ui->textEdit_names->setText("Трактирщик");
+        ui->textEdit_Text->setText("Хы-хы. Моряком только этого не говори, родной. Ни то скормят тебя рыбам. Вот вроде той, что ты сейчас уплетаешь.");
+
+    }
+        break;
+    case 8:
+    {
+        if(numOfPersosns <= 0)
+        {
+            numOfPersosns = 1;
+            persons = new QPixmap[numOfPersosns];
+        }
+        numOfPersosns = 1;
+        persons[0].load(":/persons/persons/dd.png");
+        BackgroundImg.load(":/background/background/tavern.jpg");
+        ui->textEdit_names->setText("Вы");
+        ui->textEdit_Text->setText("Сердитая рыбка?");
+    }
+        break;
+    case 9:
+    {
+        if(numOfPersosns <= 0)
+        {
+            numOfPersosns = 1;
+            persons = new QPixmap[numOfPersosns];
+        }
+        numOfPersosns = 1;
+        persons[0].load(":/persons/persons/dd.png");
+        BackgroundImg.load(":/background/background/tavern.jpg");
+        ui->textEdit_names->setText("Трактирщик");
+        ui->textEdit_Text->setText("Вот эта вот, жаренная?"
+                                   " Неет, а вот ее подружки, которые еще в море плавают, обглодают человека быстрее, чем он захлебнется.");
+    }
+        break;
+    case 10:
+    {
+        if(numOfPersosns <= 0)
+        {
+            numOfPersosns = 1;
+            persons = new QPixmap[numOfPersosns];
+        }
+        numOfPersosns = 1;
+        persons[0].load(":/persons/persons/dd.png");
+        BackgroundImg.load(":/background/background/tavern.jpg");
+        ui->textEdit_names->setText("Вы");
+        ui->textEdit_Text->setText("Значит я сейчас не закусываю, а мщу за тех,"
+                                   " кто по пути к бородатой леди недосчитался конечностей."
+                                   " Ха-ха. Какая приятная месть.");
+    }
+        break;
+    case 11:
+    {
+        if(numOfPersosns <= 0)
+        {
+            numOfPersosns = 1;
+            persons = new QPixmap[numOfPersosns];
+        }
+        numOfPersosns = 1;
+        persons[0].load(":/persons/persons/dd.png");
+        BackgroundImg.load(":/background/background/tavern.jpg");
+        ui->textEdit_names->setText("Трактищик");
+        ui->textEdit_Text->setText("Я так мыслю, родной."
+                                   " Дважды приятная месть."
+                                   " Отомстить жаренной рыбине, да еще и за счет доброго мистера Брауна.");
+    }
+        break;
+    case 12:
+    {
+        if(numOfPersosns <= 0)
+        {
+            numOfPersosns = 1;
+            persons = new QPixmap[numOfPersosns];
+        }
+        numOfPersosns = 1;
+        persons[0].load(":/persons/persons/dd.png");
+        BackgroundImg.load(":/background/background/tavern.jpg");
+        ui->textEdit_names->setText("Вы");
+        ui->textEdit_Text->setText("Верно. За доброго мистера Брауна!"
+                                   " Может я даже выслушаю его предложение.");
+    }
+        break;
+    case 13:
+    {
+        if(numOfPersosns <= 0)
+        {
+            numOfPersosns = 1;
+            persons = new QPixmap[numOfPersosns];
+        }
+        numOfPersosns = 1;
+        persons[0].load(":/persons/persons/dd.png");
+        BackgroundImg.load(":/background/background/tavern.jpg");
+        ui->textEdit_names->setText("Трактирщик");
+        ui->textEdit_Text->setText("Ни в обиду родной, но что-то не похоже, что у тебя больно много предложений было."
+                                   " Уж с такой нежностью ты на эту рыбину глядел, будто неделю постился."
+                                   " Да и денег видимо у тебя не много.");
+    }
+        break;
+    case 14:
+    {
+        if(numOfPersosns <= 0)
+        {
+            numOfPersosns = 1;
+            persons = new QPixmap[numOfPersosns];
+        }
+        numOfPersosns = 1;
+        persons[0].load(":/persons/persons/dd.png");
+        BackgroundImg.load(":/background/background/tavern.jpg");
+        ui->textEdit_names->setText("Вы");
+        ui->textEdit_Text->setText("Твоя правда."
+                                   " Прощание с Бандлсити вышло несколько скомканным."
+                                   " В жизни не подумал бы, что ерлды могут быть такими настырными."
+                                   " Целая, чертова толпа разъярённых ерлдов.");
+    }
+        break;
+    case 15:
+    {
+        if(numOfPersosns <= 0)
+        {
+            numOfPersosns = 1;
+            persons = new QPixmap[numOfPersosns];
+        }
+        numOfPersosns = 1;
+        persons[0].load(":/persons/persons/dd.png");
+        BackgroundImg.load(":/background/background/tavern.jpg");
+        ui->textEdit_names->setText("Трактирщик");
+        ui->textEdit_Text->setText("Мдауж, с малютками шутки плохи."
+                                   " Говорят, они мол от великанов произошли."
+                                   " Даже 1 ерлд может делов натворить."
+                                   " Слыхал историю про ерлдыху с молотком, про которую даже думать страшно."
+                                   " Вот то-то и оно родной.");
+    }
+        break;
+    case 16:
+    {
+        if(numOfPersosns <= 0)
+        {
+            numOfPersosns = 1;
+            persons = new QPixmap[numOfPersosns];
+        }
+        numOfPersosns = 1;
+        persons[0].load(":/persons/persons/dd.png");
+        BackgroundImg.load(":/background/background/tavern.jpg");
+        ui->textEdit_names->setText("Вы");
+        ui->textEdit_Text->setText("Ну короче, пришлось прятаться от них в трюме первой попавшейся посудине."
+                                   " Я так устал, что сразу вырубился, а проснулся я уже в открытом, дьявол его дери, море."
+                                   " А оставшиеся деньги пришлось отдать капитану, а не то я бы попал на ужин к этой рыбе, а не она ко мне."
+                                   " Но выбор у меня есть, старик, если не понравится этот ваш мистер, покажу публике пару карточных фокусов.");
+    }
+        break;
+    case 17:
+    {
+        if(numOfPersosns <= 0)
+        {
+            numOfPersosns = 1;
+            persons = new QPixmap[numOfPersosns];
+        }
+        numOfPersosns = 1;
+        persons[0].load(":/persons/persons/dd.png");
+        BackgroundImg.load(":/background/background/tavern.jpg");
+        ui->textEdit_names->setText("Трактирщик");
+        ui->textEdit_Text->setText("Только делай ноги сразу, здешний народ не сильно уважает любителей с картами фокусничать."
+                                   " Привяжут камень к ногам и в море, прощай родной, не поминай лихом.");
+    }
+        break;
+    case 18:
+    {
+        if(numOfPersosns <= 0)
+        {
+            numOfPersosns = 1;
+            persons = new QPixmap[numOfPersosns];
+        }
+        numOfPersosns = 1;
+        persons[0].load(":/persons/persons/dd.png");
+        BackgroundImg.load(":/background/background/tavern.jpg");
+        ui->textEdit_names->setText("Вы");
+        ui->textEdit_Text->setText("Пусть только попробуют, запомнят мои фокусы на всю жизнь, это если они выживут.");
+    }
+        break;
+    case 19:
+    {
+        if(numOfPersosns > 0)
+        {
+            numOfPersosns = 1;
+             persons[0].load("");
+        }
+        else numOfPersosns = 0;
+        BackgroundImg.load(":/background/background/tavern.jpg");
+        ui->textEdit_names->setText("Вы");
+        ui->textEdit_Text->setText("'Я все удивляюсь что в паре миль от Белджвотера, вдруг такое заведение: приличная публика,"
+                                   " достойный выбор вин, да что там говорить, белые скатерти на столах, чистенько тут у них до омерзения."
+                                   " Ни тебе свежих трупов в каналах по утрам, не бодрящей вони в порту."
+                                   " На улицах вместо бандитов ходит городская стража. Такие все вежливые, что аж блевать хочется.'");
+    }
+        break;
+    case 20:
+    {
+        if(numOfPersosns > 0)
+        {
+            numOfPersosns = 1;
+             persons[0].load("");
+        }
+        else numOfPersosns = 0;
+        BackgroundImg.load(":/background/background/tavern.jpg");
+        ui->textEdit_names->setText("Вы");
+        ui->textEdit_Text->setText(" 'Нее Гангплакт, хозяин Белджвотера мыслит, что к чему."
+                                   " Давно мог бы прибрать тихую гавань к рукам, но не трогает ее"
+                                   ". А все потому, что, здесь сбывают добро, которое его головорезы из чужих трюмов вытащили."
+                                   " Если какой купец будет торговать с королем пиратов на прямую, то его репутации конец, а так все приличия соблюдены."
+                                   " Как бы независимая, тихая гавань, где любой может свободно торговать или проворачивать мутные дела."
+                                   " Ну, может и опасно это, но пусть опасности сухопутные крысы боятся.'");
+    }
+        break;
+    case 21:
+    {
+        if(numOfPersosns > 0)
+        {
+            numOfPersosns = 1;
+             persons[0].load("");
+        }
+        else numOfPersosns = 0;
+        BackgroundImg.load(":/background/background/tavern.jpg");
+        ui->textEdit_names->setText("");
+        ui->textEdit_Text->setText("(вы сидите у стойки еще какое-то время, и к вам подбегает мальчик)");
+    }
+        break;
+    case 22:
+    {
+        if(numOfPersosns > 0)
+        {
+            numOfPersosns = 1;
+             persons[0].load("");
+        }
+        else numOfPersosns = 0;
+        BackgroundImg.load(":/background/background/tavern.jpg");
+        ui->textEdit_names->setText("Мальчик");
+        ui->textEdit_Text->setText("Мистер, мистер Браун просит вас подняться к нему. Позвольте вас проводить.");
+    }
+        break;
+    case 23:
+    {
+        if(numOfPersosns > 0)
+        {
+            numOfPersosns = 1;
+             persons[0].load("");
+        }
+        else numOfPersosns = 0;
+        BackgroundImg.load(":/background/background/tavern.jpg");
+        ui->textEdit_names->setText("Вы");
+        ui->textEdit_Text->setText("Спасибо, сынок.");
     }
         break;
     default:
