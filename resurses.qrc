@@ -7,6 +7,7 @@
         <file>img/57cce89aa9be6156f86c9c47.jpg</file>
         <file>img/212_87569-2560x1600.jpg</file>
         <file>img/Step_2.jpg</file>
+        <file>persons/dd.png</file>
     </qresource>
     <qresource prefix="/MainMenu">
         <file>Menu/fonmenu.jpg</file>
@@ -16,5 +17,6 @@
     </qresource>
     <qresource prefix="/background">
         <file>background/Tavern.png</file>
+        <file>background/tavern.jpg</file>
     </qresource>
 </RCC>

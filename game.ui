@@ -160,6 +160,9 @@ p, li { white-space: pre-wrap; }
             <property name="contextMenuPolicy">
              <enum>Qt::NoContextMenu</enum>
             </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
             <property name="styleSheet">
              <string notr="true">background: none;
 border: none;
@@ -172,10 +175,14 @@ border-top-left-radius: 15%;
 background-color:rgba(0, 0, 0,0.5);
 
 font: italic 20pt &quot;Monotype Corsiva&quot;;
-color: rgb(231, 231, 231);</string>
+color: rgb(231, 231, 231);
+</string>
             </property>
             <property name="sizeAdjustPolicy">
              <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
+            </property>
+            <property name="autoFormatting">
+             <set>QTextEdit::AutoNone</set>
             </property>
             <property name="readOnly">
              <bool>true</bool>

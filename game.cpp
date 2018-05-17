@@ -21,8 +21,6 @@ Game::Game(QWidget *parent) :
         currentWidth = ui->MainWindow->width();
         currentHeight = ui->MainWindow->height();
 
-        //isUpdate = true;
-
         timer = new QTimer();
         connect(timer, &QTimer::timeout, this, &Game::makeScene);
         timer->start(1);
@@ -58,10 +56,10 @@ void Game::ChangePersons(int width, int height)
             VecOfPersons.push_back(new QLabel());
         }
     }
-    int size = width/5;
+    int size = width/5 + width / 8;
     for(unsigned int i = 0; i < VecOfPersons.size();++i)
     {
-        VecOfPersons[i]->setPixmap(persons[i].scaled(size,height,Qt::KeepAspectRatio));
+        VecOfPersons[i]->setPixmap(persons[i].scaled(size,height,Qt::IgnoreAspectRatio));
         VecOfPersons[i]->setMinimumSize(size,height);
         VecOfPersons[i]->setMaximumSize(size,height);
         ui->PersonsLayout->addWidget(VecOfPersons[i]);
@@ -114,32 +112,77 @@ void Game::ChangeScene()
     switch (numOfScene++) {
     case 0:
     {
-        numOfPersosns = 1;
-        persons = new QPixmap[numOfPersosns];
-        persons[0].load(":/persons/img/boy.png");
+        //numOfPersosns = 1;
+        //persons = new QPixmap[numOfPersosns];
+        //persons[0].load(":/persons/persons/dd.png");
 
-        ui->textEdit_Text->setText( "Действие происходит в королевстве Альда, где вместе живут маги и люди. "
-                                 "До того, как появилось это королевство на этой территории располагалось другое государство – Нурия,"
-                                 " правила там Инквизиция. Однажды был найден минерал, обладающий необыч-ными свойствами:"
-                                 " стоило полить его водой, и он начинал светиться,"
-                                 " что было полезно в обычном быту и многими другими свойствами");
-        BackgroundImg.load(":/background/background/Tavern.png");
+        ui->textEdit_Text->setText( "Эй, дружище не подольешь вина?");
+        BackgroundImg.load(":/background/background/tavern.jpg");
 
-        ui->textEdit_names->setText("Алеша");
+        ui->textEdit_names->setText("Вы");
     }
         break;
 
     case 1:
     {
-        ui->textEdit_names->setText("Алеша, Иван");
-        BackgroundImg.load(":/background/background/Tavern.png");
+
+        numOfPersosns = 1;
+        persons = new QPixmap[numOfPersosns];
+        persons[0].load(":/persons/persons/dd.png");
+
+        ui->textEdit_names->setText("Трактирщик");
+        BackgroundImg.load(":/background/background/tavern.jpg");
+        ui->textEdit_Text->setText("Могу подлить. Каким ветром тебя родной занесло во владения бородатой леди? (бульк-бульк)");
 
     }
         break;
     case 2:
     {
-        BackgroundImg.load(":/background/background/Tavern.png");
-        ui->textEdit_names->setText("Иван");
+
+        numOfPersosns = 1;
+        persons = new QPixmap[numOfPersosns];
+        persons[0].load(":/persons/persons/dd.png");
+
+        BackgroundImg.load(":/background/background/tavern.jpg");
+        ui->textEdit_names->setText("Вы");
+        ui->textEdit_Text->setText("Ну, в ее то владения, хвала богам, меня пока не занесло.");
+
+
+    }
+        break;
+    case 3:
+    {
+        numOfPersosns = 1;
+        persons = new QPixmap[numOfPersosns];
+        persons[0].load(":/persons/persons/dd.png");
+
+        BackgroundImg.load(":/background/background/tavern.jpg");
+        ui->textEdit_names->setText("Трактирщик");
+        ui->textEdit_Text->setText("На островах голубого пламени и окрест, все ей принадлежит.");
+
+    }
+        break;
+    case 4:
+    {
+
+        numOfPersosns = 1;
+        persons = new QPixmap[numOfPersosns];
+        persons[0].load(":/persons/persons/dd.png");
+        BackgroundImg.load(":/background/background/tavern.jpg");
+        ui->textEdit_names->setText("Вы");
+        ui->textEdit_Text->setText("Я думал Гангпланку…");
+
+    }
+        break;
+    case 5:
+    {
+
+        numOfPersosns = 1;
+        persons = new QPixmap[numOfPersosns];
+        persons[0].load(":/persons/persons/dd.png");
+        BackgroundImg.load(":/background/background/tavern.jpg");
+        ui->textEdit_names->setText("трактирщик");
+        ui->textEdit_Text->setText("Даже и сам король пиратов, я тебе скажу. Леди властвует над всеми моряками и утопленниками.");
 
     }
         break;
