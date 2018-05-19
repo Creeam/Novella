@@ -41,3 +41,8 @@ void MenuInGame::on_pushButton_Exit_clicked()
 {
     QApplication::quit();
 }
+
+void MenuInGame::on_pushButton_4_clicked()
+{
+    emit backToMainMenu();
+}

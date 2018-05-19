@@ -26,6 +26,7 @@ public:
 
 signals:
     void start();
+    void backToMainMenu();
 
 private slots:
     void on_pushButton_menu_clicked();

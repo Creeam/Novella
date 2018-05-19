@@ -506,6 +506,7 @@ void Game::on_pushButton_menu_clicked()
     menu = new MenuInGame(this);
     menu->show();
     connect(menu, &MenuInGame::Return,this,&Game::returnToGame);
+    connect(menu, &MenuInGame::backToMainMenu,this,&Game::backToMainMenu);
     menu->resize(width/3,height);
     menu->move(-menu->width(),0);
     temp = -menu->width();

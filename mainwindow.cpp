@@ -32,6 +32,7 @@ void MainWindow::MakeWindow()
 void MainWindow::on_pushButton_NewGame_clicked()
 {
     game = new Game();
+    connect(game,&Game::backToMainMenu,this,&MainWindow::show);
     game->showFullScreen();
     hide();
 }

@@ -20,6 +20,7 @@ public:
 
 signals:
     void Return();
+    void backToMainMenu();
 
 private slots:
     void MakeWindow();
@@ -27,6 +28,8 @@ private slots:
     void on_pushButton_Return_clicked();
 
     void on_pushButton_Exit_clicked();
+
+    void on_pushButton_4_clicked();
 
 private:
     Ui::MenuInGame *ui;
